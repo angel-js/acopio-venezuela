@@ -15,9 +15,9 @@ export function AcopioSection() {
 
   const activeCenters = centrosAcopio.filter((c) => c.activo);
 
-  const availableCountries = [
-    ...new Set(activeCenters.map((c) => c.pais)),
-  ].sort();
+  const availableCountries = Array.from(
+    new Set(activeCenters.map((c) => c.pais))
+  ).sort();
 
   useEffect(() => {
     fetch("/api/geo")
