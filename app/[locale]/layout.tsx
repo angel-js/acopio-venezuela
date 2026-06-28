@@ -1,21 +1,23 @@
 import { NextIntlClientProvider } from "next-intl";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
-import { DM_Serif_Display, Inter } from "next/font/google";
+import { Archivo, Newsreader } from "next/font/google";
 import { getMessages } from "next-intl/server";
 import { CookieBanner } from "@/components/CookieBanner";
 
-const dmSerif = DM_Serif_Display({
-  weight: "400",
+const archivo = Archivo({
   subsets: ["latin"],
-  variable: "--font-dm-serif",
+  variable: "--font-archivo",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
 });
 
-const inter = Inter({
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-newsreader",
   display: "swap",
+  style: ["normal", "italic"],
+  weight: ["400", "500"],
 });
 
 export default async function LocaleLayout({
@@ -34,8 +36,11 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${dmSerif.variable} ${inter.variable}`}>
-      <body>
+    <html
+      lang={locale}
+      className={`${archivo.variable} ${newsreader.variable} scroll-smooth`}
+    >
+      <body className="font-body text-[#5a554d] antialiased">
         <NextIntlClientProvider messages={messages}>
           {children}
           <CookieBanner />

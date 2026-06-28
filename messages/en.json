@@ -6,15 +6,9 @@
   "nav": {
     "desaparecidos": "Missing Persons",
     "donaciones": "Donations",
-    "ninos": "Children",
-    "comida": "Food",
-    "salud": "Health",
-    "registro": "Registry",
-    "ingenieria": "Engineering",
-    "animales": "Animals",
+    "tipos": "Types of aid",
     "acopio": "Collection Centers",
-    "contacto": "Contact",
-    "redes": "Social Media"
+    "contacto": "Contact"
   },
   "hero": {
     "title": "Venezuela needs your help",
@@ -22,6 +16,31 @@
     "cta_desaparecidos": "Find people",
     "cta_donar": "Donate now",
     "cta_acopio": "Collection centers"
+  },
+  "impact": {
+    "eyebrow": "The earthquake in figures",
+    "missing": {
+      "label": "Persons reported"
+    },
+    "deaths": {
+      "label": "Deaths"
+    },
+    "families": {
+      "label": "Affected families"
+    },
+    "source": "* Estimated figures based on official reports and humanitarian organizations"
+  },
+  "actions": {
+    "eyebrow": "Start here",
+    "title": "How can you help today?",
+    "description": "Three direct ways to act. Pick one and start now.",
+    "search_title": "Find people",
+    "search_desc": "Verified platforms to report and find missing persons.",
+    "donate_title": "Donate",
+    "donate_desc": "Verified organizations accepting donations for Venezuela.",
+    "collect_title": "Collection centers",
+    "collect_desc": "Physical locations where you can deliver supply donations.",
+    "go_now": "Go now"
   },
   "desaparecidos": {
     "title": "Missing Persons Search",
@@ -49,6 +68,9 @@
     }
   },
   "ayuda": {
+    "section_title": "Specialized aid",
+    "section_description": "Verified organizations by category. Find where your support is needed most.",
+    "section_eyebrow": "Types of aid",
     "common": {
       "verified": "Verified",
       "visit": "Visit"
@@ -97,7 +119,7 @@
     }
   },
   "contact": {
-    "title": "Contact",
+    "title": "Missing a resource?",
     "description": "Do you know a collection center, organization, or resource that should be listed here? Send us the information.",
     "name": "Name",
     "email": "Email",
@@ -111,7 +133,7 @@
     "error": "There was an error. Please try again."
   },
   "social": {
-    "title": "Social Media",
+    "title": "Stay up to date",
     "description": "Follow these accounts to stay updated on the situation in Venezuela and aid initiatives.",
     "follow": "Follow",
     "platforms": {
@@ -132,7 +154,7 @@
   "footer": {
     "updated": "Data last updated: {date}",
     "disclaimer": "This platform is informational. Always verify directly with organizations before taking action.",
-    "made_with": "Made with ❤️ by Venezuelans for Venezuela",
+    "made_with": "Made with love by Venezuelans, for Venezuela.",
     "suggest": "Something missing? Write to us"
   }
 }

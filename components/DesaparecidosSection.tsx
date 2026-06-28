@@ -1,8 +1,5 @@
 import { useTranslations, useLocale } from "next-intl";
 import { plataformasDesaparecidos } from "@/data/desaparecidos";
-import { Card } from "./ui/Card";
-import { Badge } from "./ui/Badge";
-import { Button } from "./ui/Button";
 
 export function DesaparecidosSection() {
   const t = useTranslations("desaparecidos");
@@ -11,39 +8,71 @@ export function DesaparecidosSection() {
   const activePlatforms = plataformasDesaparecidos.filter((p) => p.activo);
 
   return (
-    <section id="desaparecidos" className="py-16 md:py-24 px-4">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-display text-venezuela-blue mb-4">
-            {t("title")}
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">{t("description")}</p>
+    <section
+      id="buscar"
+      className="bg-venezuela-cream py-[90px] px-6 scroll-mt-[66px]"
+    >
+      <div className="max-w-[1240px] mx-auto">
+        {/* Eyebrow */}
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-7 h-[3px] bg-venezuela-blue" />
+          <span className="text-venezuela-blue text-xs font-bold uppercase tracking-[.2em]">
+            BUSCAR PERSONAS
+          </span>
         </div>
 
-        <div className="bg-amber-50 border border-amber-200 rounded-lg p-4 mb-8 text-center">
-          <p className="text-amber-800 text-sm font-medium">⚠️ {t("warning")}</p>
+        {/* Heading */}
+        <h2
+          className="font-display font-black text-venezuela-ink tracking-[-0.02em] leading-tight"
+          style={{ fontSize: "clamp(28px, 4vw, 48px)" }}
+        >
+          {t("title")}
+        </h2>
+
+        {/* Description */}
+        <p className="text-[#5a554d] max-w-2xl mt-3">{t("description")}</p>
+
+        {/* Warning banner */}
+        <div className="bg-[#FFF6E0] border border-[#F2D27A] border-l-4 border-l-venezuela-yellow rounded-card p-4 mt-8 mb-10">
+          <p className="text-[#7a5e00] text-sm">
+            ⚠️ {t("warning")}
+          </p>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        {/* Platforms grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           {activePlatforms.map((platform) => (
-            <Card key={platform.id}>
-              <div className="flex flex-col h-full">
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="font-display text-xl text-venezuela-dark">
-                    {platform.nombre}
-                  </h3>
-                  <Badge variant="blue">
-                    {t(`types.${platform.tipo}`)}
-                  </Badge>
-                </div>
-                <p className="text-gray-600 text-sm mb-4 flex-1">
-                  {platform.descripcion[locale]}
-                </p>
-                <Button href={platform.url} external variant="outline" size="sm">
-                  {t("visit")} →
-                </Button>
+            <div
+              key={platform.id}
+              className="bg-white rounded-card border border-black/10 border-t-[3px] border-t-venezuela-blue p-6 hover:-translate-y-0.5 transition"
+            >
+              {/* Card header */}
+              <div className="flex justify-between items-start">
+                <h3 className="font-display font-extrabold text-venezuela-ink text-lg">
+                  {platform.nombre}
+                </h3>
+                <span className="bg-[#EAF0FB] text-venezuela-blue text-xs font-semibold px-2.5 py-1 rounded-sm">
+                  {t(`types.${platform.tipo}`)}
+                </span>
               </div>
-            </Card>
+
+              {/* Description */}
+              <p className="text-[#5a554d] text-sm mt-3">
+                {platform.descripcion[locale]}
+              </p>
+
+              {/* Link */}
+              <div className="mt-4">
+                <a
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-venezuela-blue font-bold text-sm hover:underline"
+                >
+                  {t("visit")} →
+                </a>
+              </div>
+            </div>
           ))}
         </div>
       </div>

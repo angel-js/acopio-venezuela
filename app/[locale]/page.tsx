@@ -1,11 +1,13 @@
+import { EmergencyBar } from "@/components/EmergencyBar";
 import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
+import { ImpactStats } from "@/components/ImpactStats";
+import { ActionCards } from "@/components/ActionCards";
 import { DesaparecidosSection } from "@/components/DesaparecidosSection";
 import { DonacionesSection } from "@/components/DonacionesSection";
 import { AyudaSection } from "@/components/AyudaSection";
 import { AcopioSection } from "@/components/AcopioSection";
 import { ContactSection } from "@/components/ContactSection";
-
 import { Footer } from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
 
@@ -32,17 +34,15 @@ export async function generateMetadata({
 export default function Home() {
   return (
     <>
+      <EmergencyBar />
       <Navbar />
       <main>
         <Hero />
+        <ImpactStats />
+        <ActionCards />
         <DesaparecidosSection />
         <DonacionesSection />
-        <AyudaSection categoria="ninos" />
-        <AyudaSection categoria="comida" />
-        <AyudaSection categoria="salud" />
-        <AyudaSection categoria="registro" />
-        <AyudaSection categoria="ingenieria" />
-        <AyudaSection categoria="animales" />
+        <AyudaSection />
         <AcopioSection />
         <ContactSection />
       </main>

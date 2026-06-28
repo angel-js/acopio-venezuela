@@ -6,15 +6,9 @@
   "nav": {
     "desaparecidos": "Desaparecidos",
     "donaciones": "Donaciones",
-    "ninos": "Niños",
-    "comida": "Comida",
-    "salud": "Salud",
-    "registro": "Registro",
-    "ingenieria": "Ingeniería",
-    "animales": "Animales",
+    "tipos": "Tipos de ayuda",
     "acopio": "Centros de acopio",
-    "contacto": "Contacto",
-    "redes": "Redes sociales"
+    "contacto": "Contacto"
   },
   "hero": {
     "title": "Venezuela necesita tu ayuda",
@@ -22,6 +16,31 @@
     "cta_desaparecidos": "Buscar personas",
     "cta_donar": "Donar ahora",
     "cta_acopio": "Centros de acopio"
+  },
+  "impact": {
+    "eyebrow": "El terremoto en cifras",
+    "missing": {
+      "label": "Personas reportadas"
+    },
+    "deaths": {
+      "label": "Personas fallecidas"
+    },
+    "families": {
+      "label": "Familias damnificadas"
+    },
+    "source": "* Cifras estimadas según reportes oficiales y organizaciones humanitarias"
+  },
+  "actions": {
+    "eyebrow": "Empieza aquí",
+    "title": "¿Cómo puedes ayudar hoy?",
+    "description": "Tres formas directas de actuar. Elige una y empieza ahora.",
+    "search_title": "Buscar personas",
+    "search_desc": "Plataformas verificadas para reportar y encontrar personas desaparecidas.",
+    "donate_title": "Donar",
+    "donate_desc": "Organizaciones verificadas que reciben donaciones para Venezuela.",
+    "collect_title": "Centros de acopio",
+    "collect_desc": "Lugares físicos donde puedes llevar donaciones de insumos.",
+    "go_now": "Ir ahora"
   },
   "desaparecidos": {
     "title": "Búsqueda de personas desaparecidas",
@@ -49,6 +68,9 @@
     }
   },
   "ayuda": {
+    "section_title": "Ayuda especializada",
+    "section_description": "Organizaciones verificadas por categoría. Encuentra dónde tu apoyo hace más falta.",
+    "section_eyebrow": "Tipos de ayuda",
     "common": {
       "verified": "Verificada",
       "visit": "Visitar"
@@ -97,7 +119,7 @@
     }
   },
   "contact": {
-    "title": "Contacto",
+    "title": "¿Falta un recurso?",
     "description": "¿Conoces un centro de acopio, organización o recurso que debería estar aquí? Envíanos la información.",
     "name": "Nombre",
     "email": "Correo electrónico",
@@ -111,7 +133,7 @@
     "error": "Hubo un error. Por favor intenta de nuevo."
   },
   "social": {
-    "title": "Redes sociales",
+    "title": "Mantente al día",
     "description": "Sigue estas cuentas para estar al día con la situación en Venezuela y las iniciativas de ayuda.",
     "follow": "Seguir",
     "platforms": {
@@ -132,7 +154,7 @@
   "footer": {
     "updated": "Datos actualizados por última vez: {date}",
     "disclaimer": "Esta plataforma es informativa. Verifica siempre directamente con las organizaciones antes de actuar.",
-    "made_with": "Hecho con ❤️ por venezolanos para Venezuela",
+    "made_with": "Hecho con cariño por venezolanos, para Venezuela.",
     "suggest": "¿Falta algo? Escríbenos"
   }
 }
