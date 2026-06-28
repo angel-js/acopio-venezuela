@@ -1,14 +1,46 @@
-import { useTranslations } from "next-intl";
+import { Navbar } from "@/components/Navbar";
+import { Hero } from "@/components/Hero";
+import { DesaparecidosSection } from "@/components/DesaparecidosSection";
+import { DonacionesSection } from "@/components/DonacionesSection";
+import { AcopioSection } from "@/components/AcopioSection";
+import { ContactSection } from "@/components/ContactSection";
+import { SocialSection } from "@/components/SocialSection";
+import { Footer } from "@/components/Footer";
+import { getTranslations } from "next-intl/server";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: t("title"),
+    description: t("description"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      type: "website",
+      locale: locale === "es" ? "es_VE" : "en_US",
+    },
+  };
+}
 
 export default function Home() {
-  const t = useTranslations("hero");
-
   return (
-    <main className="min-h-screen">
-      <h1 className="text-4xl font-display text-venezuela-blue p-8">
-        {t("title")}
-      </h1>
-      <p className="text-lg px-8">{t("subtitle")}</p>
-    </main>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <DesaparecidosSection />
+        <DonacionesSection />
+        <AcopioSection />
+        <ContactSection />
+        <SocialSection />
+      </main>
+      <Footer />
+    </>
   );
 }
