@@ -2,15 +2,23 @@ import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        venezuela: {
+          red: "#CF142B",
+          blue: "#00247D",
+          cream: "#F5F0E8",
+          dark: "#1A1A1A",
+          green: "#4CAF50",
+        },
+      },
+      fontFamily: {
+        display: ["var(--font-dm-serif)", "serif"],
+        body: ["var(--font-inter)", "sans-serif"],
       },
     },
   },
