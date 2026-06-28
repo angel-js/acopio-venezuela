@@ -6,7 +6,7 @@ import { Button } from "./ui/Button";
 
 export function ContactSection() {
   const t = useTranslations("contact");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "rate_limited">("idle");
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
   async function handleSubmit(e: React.FormEvent) {
@@ -23,6 +23,8 @@ export function ContactSection() {
       if (res.ok) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
+      } else if (res.status === 429) {
+        setStatus("rate_limited");
       } else {
         setStatus("error");
       }
@@ -105,6 +107,12 @@ export function ContactSection() {
           {status === "success" && (
             <div className="bg-green-50 border border-green-200 rounded-lg p-4">
               <p className="text-green-800 text-sm">{t("success")}</p>
+            </div>
+          )}
+
+          {status === "rate_limited" && (
+            <div className="bg-amber-50 border border-amber-200 rounded-lg p-4">
+              <p className="text-amber-800 text-sm">{t("rate_limited")}</p>
             </div>
           )}
 

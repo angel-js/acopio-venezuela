@@ -2,9 +2,10 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { DesaparecidosSection } from "@/components/DesaparecidosSection";
 import { DonacionesSection } from "@/components/DonacionesSection";
+import { AyudaSection } from "@/components/AyudaSection";
 import { AcopioSection } from "@/components/AcopioSection";
 import { ContactSection } from "@/components/ContactSection";
-import { SocialSection } from "@/components/SocialSection";
+
 import { Footer } from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
 
@@ -36,9 +37,14 @@ export default function Home() {
         <Hero />
         <DesaparecidosSection />
         <DonacionesSection />
+        <AyudaSection categoria="ninos" />
+        <AyudaSection categoria="comida" />
+        <AyudaSection categoria="salud" />
+        <AyudaSection categoria="registro" />
+        <AyudaSection categoria="ingenieria" />
+        <AyudaSection categoria="animales" />
         <AcopioSection />
         <ContactSection />
-        <SocialSection />
       </main>
       <Footer />
     </>

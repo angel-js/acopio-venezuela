@@ -11,9 +11,14 @@ export function Navbar() {
   const links = [
     { key: "desaparecidos", href: "#desaparecidos" },
     { key: "donaciones", href: "#donaciones" },
+    { key: "ninos", href: "#ninos" },
+    { key: "comida", href: "#comida" },
+    { key: "salud", href: "#salud" },
+    { key: "registro", href: "#registro" },
+    { key: "ingenieria", href: "#ingenieria" },
+    { key: "animales", href: "#animales" },
     { key: "acopio", href: "#acopio" },
     { key: "contacto", href: "#contacto" },
-    { key: "redes", href: "#redes" },
   ] as const;
 
   return (
@@ -21,15 +26,15 @@ export function Navbar() {
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a href="#" className="font-display text-xl text-venezuela-blue">
-            Venezuela Ayuda
+           🇻🇪 Venezuela Ayuda
           </a>
 
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-3 lg:gap-4">
             {links.map((link) => (
               <a
                 key={link.key}
                 href={link.href}
-                className="text-sm font-medium text-gray-600 hover:text-venezuela-blue transition-colors"
+                className="text-xs font-medium text-gray-600 hover:text-venezuela-blue transition-colors whitespace-nowrap"
               >
                 {t(link.key)}
               </a>

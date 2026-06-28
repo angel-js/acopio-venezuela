@@ -6,6 +6,12 @@
   "nav": {
     "desaparecidos": "Missing Persons",
     "donaciones": "Donations",
+    "ninos": "Children",
+    "comida": "Food",
+    "salud": "Health",
+    "registro": "Registry",
+    "ingenieria": "Engineering",
+    "animales": "Animals",
     "acopio": "Collection Centers",
     "contacto": "Contact",
     "redes": "Social Media"
@@ -26,7 +32,8 @@
       "base_de_datos": "Database",
       "red_social": "Social Media",
       "ong": "NGO",
-      "gobierno": "Government"
+      "gobierno": "Government",
+      "plataforma": "Platform"
     }
   },
   "donaciones": {
@@ -39,6 +46,36 @@
       "transferencia": "Wire Transfer",
       "cripto": "Crypto",
       "tarjeta": "Credit Card"
+    }
+  },
+  "ayuda": {
+    "common": {
+      "verified": "Verified",
+      "visit": "Visit"
+    },
+    "ninos": {
+      "title": "Children's Aid",
+      "description": "Verified organizations providing protection and assistance to affected children and adolescents."
+    },
+    "comida": {
+      "title": "Food",
+      "description": "Organizations providing emergency food and nutritional support in Venezuela."
+    },
+    "salud": {
+      "title": "Health & Medicine",
+      "description": "Organizations sending medical supplies and health professionals to Venezuela."
+    },
+    "registro": {
+      "title": "Aid Registry",
+      "description": "Platforms to register and coordinate humanitarian aid securely."
+    },
+    "ingenieria": {
+      "title": "Engineering & Architecture",
+      "description": "Resources for structural damage assessment and reconstruction assistance."
+    },
+    "animales": {
+      "title": "Animals",
+      "description": "Rescue and care organizations for pets and animals affected by the earthquake."
     }
   },
   "acopio": {
@@ -70,6 +107,7 @@
     "placeholder_message": "Describe the resource you want to add or suggest...",
     "submit": "Submit request",
     "success": "Thank you! We'll review your request soon.",
+    "rate_limited": "You've sent too many messages. Please try again in an hour.",
     "error": "There was an error. Please try again."
   },
   "social": {
@@ -83,6 +121,13 @@
       "tiktok": "TikTok",
       "youtube": "YouTube"
     }
+  },
+  "cookies": {
+    "title": "Cookie Usage",
+    "description": "We use cookies to improve your experience and detect your location to show nearby collection centers. You can choose which cookies to accept.",
+    "accept_all": "Accept all",
+    "accept_necessary": "Necessary only",
+    "reject_all": "Reject all"
   },
   "footer": {
     "updated": "Data last updated: {date}",

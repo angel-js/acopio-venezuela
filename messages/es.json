@@ -6,6 +6,12 @@
   "nav": {
     "desaparecidos": "Desaparecidos",
     "donaciones": "Donaciones",
+    "ninos": "Niños",
+    "comida": "Comida",
+    "salud": "Salud",
+    "registro": "Registro",
+    "ingenieria": "Ingeniería",
+    "animales": "Animales",
     "acopio": "Centros de acopio",
     "contacto": "Contacto",
     "redes": "Redes sociales"
@@ -26,7 +32,8 @@
       "base_de_datos": "Base de datos",
       "red_social": "Red social",
       "ong": "ONG",
-      "gobierno": "Gobierno"
+      "gobierno": "Gobierno",
+      "plataforma": "Plataforma"
     }
   },
   "donaciones": {
@@ -39,6 +46,36 @@
       "transferencia": "Transferencia",
       "cripto": "Cripto",
       "tarjeta": "Tarjeta"
+    }
+  },
+  "ayuda": {
+    "common": {
+      "verified": "Verificada",
+      "visit": "Visitar"
+    },
+    "ninos": {
+      "title": "Ayuda Niños",
+      "description": "Organizaciones verificadas que brindan protección y asistencia a niños y adolescentes afectados."
+    },
+    "comida": {
+      "title": "Comida",
+      "description": "Organizaciones que proveen alimentación de emergencia y apoyo nutricional en Venezuela."
+    },
+    "salud": {
+      "title": "Salud y Medicina",
+      "description": "Organizaciones que envían suministros médicos y profesionales de salud a Venezuela."
+    },
+    "registro": {
+      "title": "Registro de Ayuda",
+      "description": "Plataformas para registrar y coordinar la ayuda humanitaria de manera segura."
+    },
+    "ingenieria": {
+      "title": "Ingeniería y Arquitectura",
+      "description": "Recursos para evaluación de daños estructurales y asistencia en reconstrucción."
+    },
+    "animales": {
+      "title": "Animales",
+      "description": "Organizaciones de rescate y cuidado de mascotas y animales afectados por el terremoto."
     }
   },
   "acopio": {
@@ -70,6 +107,7 @@
     "placeholder_message": "Describe qué recurso quieres agregar o sugerir...",
     "submit": "Enviar solicitud",
     "success": "¡Gracias! Revisaremos tu solicitud pronto.",
+    "rate_limited": "Has enviado demasiados mensajes. Intenta de nuevo en una hora.",
     "error": "Hubo un error. Por favor intenta de nuevo."
   },
   "social": {
@@ -83,6 +121,13 @@
       "tiktok": "TikTok",
       "youtube": "YouTube"
     }
+  },
+  "cookies": {
+    "title": "Uso de cookies",
+    "description": "Usamos cookies para mejorar tu experiencia y detectar tu ubicación para mostrarte centros de acopio cercanos. Puedes elegir qué cookies aceptar.",
+    "accept_all": "Aceptar todas",
+    "accept_necessary": "Solo necesarias",
+    "reject_all": "Rechazar todas"
   },
   "footer": {
     "updated": "Datos actualizados por última vez: {date}",

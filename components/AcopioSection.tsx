@@ -20,6 +20,9 @@ export function AcopioSection() {
   ).sort();
 
   useEffect(() => {
+    const consent = localStorage.getItem("cookie-consent");
+    if (consent === "none") return;
+
     fetch("/api/geo")
       .then((res) => res.json())
       .then((data) => {

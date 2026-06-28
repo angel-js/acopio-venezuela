@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { DM_Serif_Display, Inter } from "next/font/google";
 import { getMessages } from "next-intl/server";
+import { CookieBanner } from "@/components/CookieBanner";
 
 const dmSerif = DM_Serif_Display({
   weight: "400",
@@ -37,6 +38,7 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <CookieBanner />
         </NextIntlClientProvider>
       </body>
     </html>
