@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "title": "Venezuela Ayuda — Humanitarian Aid Information",
+    "description": "Centralized information about missing persons search, verified donations, and collection centers for Venezuela."
+  },
+  "nav": {
+    "desaparecidos": "Missing Persons",
+    "donaciones": "Donations",
+    "acopio": "Collection Centers",
+    "contacto": "Contact",
+    "redes": "Social Media"
+  },
+  "hero": {
+    "title": "Venezuela needs your help",
+    "subtitle": "Centralized information to find missing people, donate, and deliver supplies. All verified, all in one place.",
+    "cta_desaparecidos": "Find people",
+    "cta_donar": "Donate now",
+    "cta_acopio": "Collection centers"
+  },
+  "desaparecidos": {
+    "title": "Missing Persons Search",
+    "description": "Verified platforms where you can search for information about missing people.",
+    "warning": "Always verify the source before sharing personal information.",
+    "visit": "Visit site",
+    "types": {
+      "base_de_datos": "Database",
+      "red_social": "Social Media",
+      "ong": "NGO",
+      "gobierno": "Government"
+    }
+  },
+  "donaciones": {
+    "title": "Monetary Donations",
+    "description": "Verified organizations that accept donations for Venezuela. All links open in a new tab.",
+    "donate": "Donate",
+    "verified": "Verified",
+    "payment_methods": {
+      "paypal": "PayPal",
+      "transferencia": "Wire Transfer",
+      "cripto": "Crypto",
+      "tarjeta": "Credit Card"
+    }
+  },
+  "acopio": {
+    "title": "Collection Centers",
+    "description": "Physical locations where you can deliver supply donations. Select your country to see the nearest centers.",
+    "filter_country": "Filter by country",
+    "all_countries": "All countries",
+    "no_centers": "No registered centers in your country yet. You can help by sending monetary donations.",
+    "schedule": "Schedule",
+    "phone": "Phone",
+    "email": "Email",
+    "accepts": "Accepts",
+    "detected_country": "Showing centers in {country}",
+    "supplies": {
+      "alimentos": "Food",
+      "medicamentos": "Medicine",
+      "ropa": "Clothing",
+      "higiene": "Hygiene"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "description": "Do you know a collection center, organization, or resource that should be listed here? Send us the information.",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "placeholder_name": "Your name",
+    "placeholder_email": "you@email.com",
+    "placeholder_message": "Describe the resource you want to add or suggest...",
+    "submit": "Submit request",
+    "success": "Thank you! We'll review your request soon.",
+    "error": "There was an error. Please try again."
+  },
+  "social": {
+    "title": "Social Media",
+    "description": "Follow these accounts to stay updated on the situation in Venezuela and aid initiatives.",
+    "follow": "Follow",
+    "platforms": {
+      "instagram": "Instagram",
+      "twitter": "X (Twitter)",
+      "facebook": "Facebook",
+      "tiktok": "TikTok",
+      "youtube": "YouTube"
+    }
+  },
+  "footer": {
+    "updated": "Data last updated: {date}",
+    "disclaimer": "This platform is informational. Always verify directly with organizations before taking action.",
+    "made_with": "Made with ❤️ by Venezuelans for Venezuela",
+    "suggest": "Something missing? Write to us"
+  }
+}

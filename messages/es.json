@@ -1,0 +1,93 @@
+{
+  "metadata": {
+    "title": "Venezuela Ayuda — Información de ayuda humanitaria",
+    "description": "Centraliza información sobre búsqueda de desaparecidos, donaciones verificadas y centros de acopio para Venezuela."
+  },
+  "nav": {
+    "desaparecidos": "Desaparecidos",
+    "donaciones": "Donaciones",
+    "acopio": "Centros de acopio",
+    "contacto": "Contacto",
+    "redes": "Redes sociales"
+  },
+  "hero": {
+    "title": "Venezuela necesita tu ayuda",
+    "subtitle": "Información centralizada para buscar desaparecidos, donar y llevar insumos. Todo verificado, todo en un lugar.",
+    "cta_desaparecidos": "Buscar personas",
+    "cta_donar": "Donar ahora",
+    "cta_acopio": "Centros de acopio"
+  },
+  "desaparecidos": {
+    "title": "Búsqueda de personas desaparecidas",
+    "description": "Plataformas verificadas donde puedes buscar información sobre personas desaparecidas.",
+    "warning": "Verifica siempre la fuente antes de compartir información personal.",
+    "visit": "Ir al sitio",
+    "types": {
+      "base_de_datos": "Base de datos",
+      "red_social": "Red social",
+      "ong": "ONG",
+      "gobierno": "Gobierno"
+    }
+  },
+  "donaciones": {
+    "title": "Donaciones monetarias",
+    "description": "Organizaciones verificadas que reciben donaciones para Venezuela. Todos los links abren en una nueva pestaña.",
+    "donate": "Donar",
+    "verified": "Verificada",
+    "payment_methods": {
+      "paypal": "PayPal",
+      "transferencia": "Transferencia",
+      "cripto": "Cripto",
+      "tarjeta": "Tarjeta"
+    }
+  },
+  "acopio": {
+    "title": "Centros de acopio",
+    "description": "Lugares físicos donde puedes llevar donaciones de insumos. Selecciona tu país para ver los centros más cercanos.",
+    "filter_country": "Filtrar por país",
+    "all_countries": "Todos los países",
+    "no_centers": "No hay centros registrados en tu país aún. Puedes ayudar enviando donaciones monetarias.",
+    "schedule": "Horario",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "accepts": "Acepta",
+    "detected_country": "Mostrando centros en {country}",
+    "supplies": {
+      "alimentos": "Alimentos",
+      "medicamentos": "Medicamentos",
+      "ropa": "Ropa",
+      "higiene": "Higiene"
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "description": "¿Conoces un centro de acopio, organización o recurso que debería estar aquí? Envíanos la información.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "message": "Mensaje",
+    "placeholder_name": "Tu nombre",
+    "placeholder_email": "tu@email.com",
+    "placeholder_message": "Describe qué recurso quieres agregar o sugerir...",
+    "submit": "Enviar solicitud",
+    "success": "¡Gracias! Revisaremos tu solicitud pronto.",
+    "error": "Hubo un error. Por favor intenta de nuevo."
+  },
+  "social": {
+    "title": "Redes sociales",
+    "description": "Sigue estas cuentas para estar al día con la situación en Venezuela y las iniciativas de ayuda.",
+    "follow": "Seguir",
+    "platforms": {
+      "instagram": "Instagram",
+      "twitter": "X (Twitter)",
+      "facebook": "Facebook",
+      "tiktok": "TikTok",
+      "youtube": "YouTube"
+    }
+  },
+  "footer": {
+    "updated": "Datos actualizados por última vez: {date}",
+    "disclaimer": "Esta plataforma es informativa. Verifica siempre directamente con las organizaciones antes de actuar.",
+    "made_with": "Hecho con ❤️ por venezolanos para Venezuela",
+    "suggest": "¿Falta algo? Escríbenos"
+  }
+}
