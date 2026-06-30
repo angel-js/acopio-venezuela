@@ -84,7 +84,7 @@ export function ActionCards() {
   const t = useTranslations("actions");
 
   return (
-    <section className="bg-venezuela-cream py-[90px] px-6">
+    <section aria-label="Cómo ayudar" className="bg-venezuela-cream py-[90px] px-6">
       <div className="max-w-[1240px] mx-auto">
         {/* Header */}
         <div className="flex items-center justify-center gap-3 mb-4">

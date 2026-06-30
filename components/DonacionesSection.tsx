@@ -10,6 +10,7 @@ export function DonacionesSection() {
   return (
     <section
       id="donar"
+      aria-label="Donaciones monetarias"
       className="bg-venezuela-ink py-[90px] px-6 scroll-mt-[66px]"
     >
       <div className="max-w-[1240px] mx-auto">

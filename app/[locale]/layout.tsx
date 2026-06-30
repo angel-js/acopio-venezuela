@@ -42,6 +42,12 @@ export default async function LocaleLayout({
     >
       <body className="font-body text-[#5a554d] antialiased">
         <NextIntlClientProvider messages={messages}>
+          <a
+            href="#buscar"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-venezuela-blue focus:text-white focus:px-4 focus:py-2 focus:rounded focus:font-bold focus:text-sm"
+          >
+            Saltar al contenido
+          </a>
           {children}
           <CookieBanner />
         </NextIntlClientProvider>
