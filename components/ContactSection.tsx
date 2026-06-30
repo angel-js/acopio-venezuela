@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { useState, useRef } from "react";
-import { Turnstile } from "@marsidev/react-turnstile";
+import { Turnstile, type TurnstileInstance } from "@marsidev/react-turnstile";
 import { redesSociales } from "@/data/social";
 
 export function ContactSection() {
@@ -12,7 +12,7 @@ export function ContactSection() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "rate_limited">("idle");
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
-  const turnstileRef = useRef<{ reset: () => void }>(null);
+  const turnstileRef = useRef<TurnstileInstance>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
