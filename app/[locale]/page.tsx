@@ -7,7 +7,7 @@ import { DesaparecidosSection } from "@/components/DesaparecidosSection";
 import { DonacionesSection } from "@/components/DonacionesSection";
 import { AyudaSection } from "@/components/AyudaSection";
 import { AcopioSection } from "@/components/AcopioSection";
-// import { ContactSection } from "@/components/ContactSection";
+import { ContactSection } from "@/components/ContactSection";
 import { Footer } from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
 
@@ -19,14 +19,28 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "metadata" });
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ayudavenezuela2026.org";
+
   return {
     title: t("title"),
     description: t("description"),
+    metadataBase: new URL(siteUrl),
+    alternates: {
+      canonical: `${siteUrl}/${locale}`,
+      languages: { es: `${siteUrl}/es`, en: `${siteUrl}/en` },
+    },
     openGraph: {
       title: t("title"),
       description: t("description"),
+      url: `${siteUrl}/${locale}`,
+      siteName: "Ayuda Venezuela",
       type: "website",
       locale: locale === "es" ? "es_VE" : "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
     },
   };
 }
@@ -44,7 +58,7 @@ export default function Home() {
         <DonacionesSection />
         <AyudaSection />
         <AcopioSection />
-        {/* <ContactSection /> */}
+        <ContactSection />
       </main>
       <Footer />
     </>

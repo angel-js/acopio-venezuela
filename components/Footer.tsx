@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { VenezuelaFlag } from "./VenezuelaFlag";
 
 export function Footer() {
   const t = useTranslations("footer");
@@ -11,14 +12,9 @@ export function Footer() {
           {/* Left: Logo + updated */}
           <div>
             <div className="flex items-center gap-3">
-              {/* Flag stripes */}
-              <div className="flex flex-col rounded-sm overflow-hidden w-4 h-6">
-                <div className="flex-1 bg-venezuela-yellow" />
-                <div className="flex-1 bg-venezuela-blue" />
-                <div className="flex-1 bg-venezuela-red" />
-              </div>
+              <VenezuelaFlag width={44} height={30} />
               <span className="font-display font-extrabold text-white text-lg">
-                Venezuela Ayuda
+                Ayuda Venezuela
               </span>
             </div>
             <p className="text-[#8f897f] text-sm mt-2">

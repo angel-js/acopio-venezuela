@@ -4,6 +4,7 @@ import { routing } from "@/i18n/routing";
 import { Archivo, Newsreader } from "next/font/google";
 import { getMessages } from "next-intl/server";
 import { CookieBanner } from "@/components/CookieBanner";
+import { Analytics } from "@vercel/analytics/next";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -50,6 +51,7 @@ export default async function LocaleLayout({
           </a>
           {children}
           <CookieBanner />
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
