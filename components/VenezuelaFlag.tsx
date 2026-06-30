@@ -1,7 +1,4 @@
 export function VenezuelaFlag({ width = 44, height = 30 }: { width?: number; height?: number }) {
-  const scaleX = width / 300;
-  const scaleY = height / 200;
-
   const dots = [
     { cx: 188, cy: 112 },
     { cx: 180, cy: 101 },
