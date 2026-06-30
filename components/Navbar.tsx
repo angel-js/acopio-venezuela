@@ -3,6 +3,7 @@
 import { useTranslations } from "next-intl";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { useState } from "react";
+import { VenezuelaFlag } from "./VenezuelaFlag";
 
 export function Navbar() {
   const t = useTranslations("nav");
@@ -24,14 +25,9 @@ export function Navbar() {
       <div className="max-w-[1240px] mx-auto px-6 h-full flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2.5 no-underline">
-          {/* Flag stripes */}
-          <div className="flex flex-col rounded-sm overflow-hidden" style={{ width: 30, height: 26 }}>
-            <div className="flex-1 bg-venezuela-yellow" />
-            <div className="flex-1 bg-venezuela-blue" />
-            <div className="flex-1 bg-venezuela-red" />
-          </div>
+          <VenezuelaFlag width={44} height={30} />
           <span className="font-display font-extrabold text-lg tracking-tight text-venezuela-ink">
-            Venezuela Ayuda
+            Ayuda Venezuela
           </span>
         </a>
 

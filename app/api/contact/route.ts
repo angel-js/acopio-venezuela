@@ -41,11 +41,30 @@ export async function POST(request: NextRequest) {
     }
 
     const body = await request.json();
-    const { name, email, message } = body;
+    const { name, email, message, turnstileToken } = body;
 
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "All fields are required" },
+        { status: 400 }
+      );
+    }
+
+    const verifyRes = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          secret: process.env.TURNSTILE_SECRET_KEY,
+          response: turnstileToken,
+        }),
+      }
+    );
+    const verifyData = await verifyRes.json();
+    if (!verifyData.success) {
+      return NextResponse.json(
+        { error: "Captcha verification failed" },
         { status: 400 }
       );
     }
@@ -59,13 +78,13 @@ export async function POST(request: NextRequest) {
     }
 
     await transporter.sendMail({
-      from: `"Venezuela Ayuda" <${process.env.GMAIL_USER}>`,
+      from: `"Ayuda Venezuela" <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
       replyTo: email,
-      subject: `[Venezuela Ayuda] Nuevo mensaje de ${name}`,
+      subject: `[Ayuda Venezuela] Nuevo mensaje de ${name}`,
       text: `Nombre: ${name}\nCorreo: ${email}\n\nMensaje:\n${message}`,
       html: `
-        <h2>Nuevo mensaje desde Venezuela Ayuda</h2>
+        <h2>Nuevo mensaje desde Ayuda Venezuela</h2>
         <p><strong>Nombre:</strong> ${name}</p>
         <p><strong>Correo:</strong> ${email}</p>
         <hr />

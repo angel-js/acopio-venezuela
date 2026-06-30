@@ -1,7 +1,8 @@
 "use client";
 
 import { useTranslations, useLocale } from "next-intl";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { Turnstile } from "@marsidev/react-turnstile";
 import { redesSociales } from "@/data/social";
 
 export function ContactSection() {
@@ -10,28 +11,39 @@ export function ContactSection() {
   const locale = useLocale() as "es" | "en";
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error" | "rate_limited">("idle");
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
+  const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
+  const turnstileRef = useRef<{ reset: () => void }>(null);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus("loading");
 
+    if (!turnstileToken) {
+      setStatus("error");
+      return;
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, turnstileToken }),
       });
 
       if (res.ok) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
+        setTurnstileToken(null);
+        turnstileRef.current?.reset();
       } else if (res.status === 429) {
         setStatus("rate_limited");
       } else {
         setStatus("error");
+        turnstileRef.current?.reset();
       }
     } catch {
       setStatus("error");
+      turnstileRef.current?.reset();
     }
   }
 
@@ -119,9 +131,17 @@ export function ContactSection() {
                 </div>
               )}
 
+              <Turnstile
+                ref={turnstileRef}
+                siteKey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY!}
+                onSuccess={setTurnstileToken}
+                onExpire={() => setTurnstileToken(null)}
+                options={{ theme: "light", language: "es" }}
+              />
+
               <button
                 type="submit"
-                disabled={status === "loading"}
+                disabled={status === "loading" || !turnstileToken}
                 className="w-full bg-venezuela-blue text-white py-3.5 rounded-card font-bold text-sm hover:bg-blue-900 transition mt-2 disabled:opacity-60"
               >
                 {status === "loading" ? "..." : t("submit")}
