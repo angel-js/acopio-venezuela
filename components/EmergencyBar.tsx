@@ -8,10 +8,10 @@ export function EmergencyBar() {
   if (dismissed) return null;
 
   return (
-    <div className="w-full bg-venezuela-red text-white text-xs py-2 px-4 flex items-center justify-between">
+    <div role="alert" aria-live="assertive" className="w-full bg-venezuela-red text-white text-xs py-2 px-4 flex items-center justify-between">
       {/* Left: pulsing dot + text */}
       <div className="flex items-center gap-2">
-        <span className="w-2 h-2 rounded-full bg-venezuela-yellow animate-pulse flex-shrink-0" />
+        <span aria-hidden="true" className="w-2 h-2 rounded-full bg-venezuela-yellow animate-pulse flex-shrink-0" />
         <span className="uppercase tracking-[.12em] font-semibold">
           EMERGENCIA ACTIVA · TERREMOTO VENEZUELA
         </span>

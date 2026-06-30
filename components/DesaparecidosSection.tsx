@@ -10,12 +10,13 @@ export function DesaparecidosSection() {
   return (
     <section
       id="buscar"
+      aria-label="Búsqueda de personas desaparecidas"
       className="bg-venezuela-cream py-[90px] px-6 scroll-mt-[66px]"
     >
       <div className="max-w-[1240px] mx-auto">
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-7 h-[3px] bg-venezuela-blue" />
+          <div aria-hidden="true" className="w-7 h-[3px] bg-venezuela-blue" />
           <span className="text-venezuela-blue text-xs font-bold uppercase tracking-[.2em]">
             BUSCAR PERSONAS
           </span>

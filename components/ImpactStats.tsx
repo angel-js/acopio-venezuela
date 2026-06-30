@@ -49,16 +49,16 @@ function StatCard({
   const isYellow = statKey === "missing";
 
   return (
-    <div className="py-6 px-4 md:px-8 border-b border-white/10 md:border-b-0 md:border-r last:border-0">
+    <div className="py-4 px-4 md:px-8 flex flex-col justify-center">
       <span
-        className={`font-display font-black tracking-tight tabular-nums block ${
+        className={`font-display font-black tracking-tight tabular-nums leading-none ${
           isYellow ? "text-venezuela-yellow" : "text-white"
         }`}
-        style={{ fontSize: "clamp(34px, 4.5vw, 52px)" }}
+        style={{ fontSize: "clamp(20px, 2.5vw, 30px)" }}
       >
         {count.toLocaleString()}+
       </span>
-      <span className="uppercase text-[#b7b0a6] text-xs font-bold tracking-[.15em] mt-2 block">
+      <span className="uppercase text-[#8f897f] text-[10px] font-bold tracking-[.12em] mt-1">
         {label}
       </span>
     </div>
@@ -81,7 +81,7 @@ export function ImpactStats() {
           observer.disconnect();
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.5 }
     );
 
     observer.observe(el);
@@ -89,16 +89,9 @@ export function ImpactStats() {
   }, []);
 
   return (
-    <section ref={ref} className="bg-venezuela-ink py-[90px] px-6">
+    <section ref={ref} aria-label="Cifras del terremoto" className="bg-venezuela-ink border-b border-white/10 px-6">
       <div className="max-w-[1240px] mx-auto">
-        <div className="mb-8">
-          <span className="w-7 h-[3px] bg-venezuela-yellow inline-block mr-3 align-middle" />
-          <span className="text-venezuela-yellow text-xs font-bold uppercase tracking-[.2em] align-middle">
-            {t("eyebrow")}
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-3 divide-x divide-white/10">
           {stats.map((stat) => (
             <StatCard
               key={stat.key}
@@ -109,8 +102,6 @@ export function ImpactStats() {
             />
           ))}
         </div>
-
-        <p className="text-[13px] text-[#8f897f] mt-8">{t("source")}</p>
       </div>
     </section>
   );

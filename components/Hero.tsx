@@ -9,6 +9,7 @@ export function Hero() {
 
   return (
     <section
+      aria-label="Venezuela necesita tu ayuda"
       className="relative min-h-[90vh] flex items-end bg-venezuela-ink"
       style={{
         background:
@@ -19,7 +20,7 @@ export function Hero() {
       <div className="relative max-w-[1240px] mx-auto px-6 pb-16 md:pb-24 w-full">
         {/* Eyebrow badge */}
         <div className="inline-flex items-center gap-2 bg-venezuela-red text-white text-xs font-bold uppercase tracking-[.12em] px-4 py-2 rounded-sm mb-6">
-          <span className="w-2 h-2 rounded-full bg-venezuela-yellow animate-pulse flex-shrink-0" />
+          <span aria-hidden="true" className="w-2 h-2 rounded-full bg-venezuela-yellow animate-pulse flex-shrink-0" />
           EMERGENCIA HUMANITARIA
         </div>
 
