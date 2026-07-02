@@ -102,21 +102,9 @@
   },
   "acopio": {
     "title": "Centros de acopio",
-    "description": "Lugares físicos donde puedes llevar donaciones de insumos. Selecciona tu país para ver los centros más cercanos.",
-    "filter_country": "Filtrar por país",
-    "all_countries": "Todos los países",
-    "no_centers": "No hay centros registrados en tu país aún. Puedes ayudar enviando donaciones monetarias.",
-    "schedule": "Horario",
-    "phone": "Teléfono",
-    "email": "Correo",
-    "accepts": "Acepta",
-    "detected_country": "Mostrando centros en {country}",
-    "supplies": {
-      "alimentos": "Alimentos",
-      "medicamentos": "Medicamentos",
-      "ropa": "Ropa",
-      "higiene": "Higiene"
-    }
+    "description": "Lugares físicos donde puedes llevar donaciones de insumos.",
+    "directory_description": "El directorio completo y verificado de centros de acopio, con mapa, búsqueda por ubicación y cientos de puntos activos, vive en Acopios Venezuela.",
+    "directory_cta": "Ver directorio de centros de acopio"
   },
   "contact": {
     "title": "¿Falta un recurso?",
@@ -146,7 +134,7 @@
   },
   "cookies": {
     "title": "Uso de cookies",
-    "description": "Usamos cookies para mejorar tu experiencia y detectar tu ubicación para mostrarte centros de acopio cercanos. Puedes elegir qué cookies aceptar.",
+    "description": "Usamos cookies para mejorar tu experiencia y medir el uso del sitio. Puedes elegir qué cookies aceptar.",
     "accept_all": "Aceptar todas",
     "accept_necessary": "Solo necesarias",
     "reject_all": "Rechazar todas"

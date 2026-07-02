@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 const stats = [
   { key: "missing", value: 61000 },
-  { key: "deaths", value: 1719 },
+  { key: "deaths", value: 2295 },
   { key: "families", value: 13000 },
 ] as const;
 

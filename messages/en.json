@@ -102,21 +102,9 @@
   },
   "acopio": {
     "title": "Collection Centers",
-    "description": "Physical locations where you can deliver supply donations. Select your country to see the nearest centers.",
-    "filter_country": "Filter by country",
-    "all_countries": "All countries",
-    "no_centers": "No registered centers in your country yet. You can help by sending monetary donations.",
-    "schedule": "Schedule",
-    "phone": "Phone",
-    "email": "Email",
-    "accepts": "Accepts",
-    "detected_country": "Showing centers in {country}",
-    "supplies": {
-      "alimentos": "Food",
-      "medicamentos": "Medicine",
-      "ropa": "Clothing",
-      "higiene": "Hygiene"
-    }
+    "description": "Physical locations where you can deliver supply donations.",
+    "directory_description": "The full, verified directory of collection centers, with a map, location search, and hundreds of active drop-off points, lives on Acopios Venezuela.",
+    "directory_cta": "View collection centers directory"
   },
   "contact": {
     "title": "Missing a resource?",
@@ -146,7 +134,7 @@
   },
   "cookies": {
     "title": "Cookie Usage",
-    "description": "We use cookies to improve your experience and detect your location to show nearby collection centers. You can choose which cookies to accept.",
+    "description": "We use cookies to improve your experience and measure site usage. You can choose which cookies to accept.",
     "accept_all": "Accept all",
     "accept_necessary": "Necessary only",
     "reject_all": "Reject all"
